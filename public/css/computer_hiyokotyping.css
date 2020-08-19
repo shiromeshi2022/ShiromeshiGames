@@ -1,0 +1,64 @@
+.main {
+  flex:1;
+  background: white;
+  min-width: 808px;
+  margin: 90px;
+  padding: 50px;
+}
+
+.rule {
+  padding: 10px;
+  margin: 10px auto 10px auto;
+  font-size: 15px;
+  border:2px solid gray;
+}
+
+.key {
+  height: 50px;
+  width: 50px;
+
+  margin: 2px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+.key-tips{
+  background: pink;
+}
+.dummy-key{
+  height: 50px;
+
+  margin: 2px;
+
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+
+.finger {
+  width: 50px;
+  margin: auto 5px 0px 5px;
+  border-radius: 30px 30px 0 0;
+  background: gray;
+}
+.finger-1{
+  height: 40px;
+}
+.finger-2{
+  height: 80px;
+}
+.finger-3{
+  height: 90px;
+}
+.finger-4{
+  height: 80px;
+}
+.finger-5{
+  height: 50px;
+}
+
+.finger-tips {
+  background: pink;
+}

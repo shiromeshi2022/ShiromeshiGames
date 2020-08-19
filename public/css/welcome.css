@@ -1,0 +1,113 @@
+/* 全体的なスタイル
+-------------------------------------------------- */
+/* フッターの下の空白と明るめの本文 */
+.featurette-divider {
+  margin: 5rem 0; /* ブートストラップの&lt;hr&gt;をもっと外に出す */
+}
+
+/* マーケティングの見出しを細めにする */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* レスポンシブCSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* カルーセルコンテンツのサイズを大きくする */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+
+html, body {
+  background-color: #fff;
+  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-weight: 200;
+  height: 100vh;
+  margin: 0;  
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.full-height {
+    height: 100vh;
+}
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.position-ref {
+    position: relative;
+}
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+.content {
+    text-align: center;
+}
+.title {
+    font-size: 84px;
+}
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.m-b-md {
+    margin-bottom: 30px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.menu {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    user-select: none;
+}
+.menu-icon {
+    width: auto;
+    height: 90%;
+    margin: auto 10% auto 40px;
+    text-align: center;
+}
+.menu-descript h1 {
+    background: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0;
+    margin-top: 80px;
+}
+.menu:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+    /* ↑main↑ */

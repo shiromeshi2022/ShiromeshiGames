@@ -1,0 +1,37 @@
+/* profile-window */
+.profile-window {
+  position: relative;
+}
+.pin-title {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+.icon {
+  height: 150px;
+  width: 150px;
+}
+
+
+/* rank-window */
+.rank-window {
+  max-width: 800px;
+  position: relative;
+}
+
+
+/* game-window */
+.game-window {
+  max-width: 800px;
+}
+.game-mark {
+  height: 15px;
+  width: 15px;
+  margin: auto 5px auto 0;
+  border-radius: 20%;
+}
+.game-title {
+  line-height: 32px;
+  font-weight: bold;
+  margin: 0;
+}
