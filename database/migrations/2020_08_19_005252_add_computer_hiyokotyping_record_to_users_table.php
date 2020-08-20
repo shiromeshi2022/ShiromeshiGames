@@ -26,7 +26,7 @@ class AddComputerHiyokotypingRecordToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->smallinteger('computer_hiyokotyping_record')->default(0);
+            // 
         });
     }
 }

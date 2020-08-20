@@ -83,6 +83,7 @@
         <h4 class="pin-title font-weight-bold"><img src="{{asset('img/pin.png')}}">Profile</h4>
         <h1 class="font-weight-bold">{{$user->name}}</h1>
         <img src="{{asset('img/icon_normal.png')}}" class="icon border border-secondary rounded-circle m-3">
+        <h4>{{$user->email}}</h4>
         <a href="{{route('home.edit')}}" class="btn btn-danger btn-sm flex-end align-self-center mt-3 w-75">プロフィールを編集する</a>
     </div>
     <!-----------------------↑↑[プロフィール]↑↑--------------------------->
