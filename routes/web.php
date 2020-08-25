@@ -27,6 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(["prefix"=>"home"], function() {
     Route::get("/edit", "HomeController@edit")->name('home.edit');
     Route::post("/update/{id}", "HomeController@update");
+    Route::post("/destroy/{id}", "HomeController@destroy");
 });
 
 

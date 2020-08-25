@@ -26,20 +26,6 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('メールアドレス') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード') }}</label>
 
                             <div class="col-md-6">
@@ -70,9 +56,34 @@
                             </div>
                         </div>
                     </form>
+
+
+                    <form method="POST" action="/home/destroy/{{$user->id}}" class="mt-3" onSubmit="return check()">
+                        @csrf
+                        <div class="col-md-6 offset-md-4">
+                            <button type="submit" class="btn btn-danger" >
+                                {{ __('ユーザーを削除する') }}
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+<script type="text/javascript"> 
+function check(){//ユーザー削除時の確認アラーム
+	if(window.confirm('本当に削除してよろしいですか？')){
+		return true; // 「OK」時は送信を実行
+	}
+	else{ // 「キャンセル」時の処理
+		window.alert('キャンセルされました'); // 警告ダイアログを表示
+		return false; // 送信を中止
+	}
+}
+</script>
+
 @endsection
