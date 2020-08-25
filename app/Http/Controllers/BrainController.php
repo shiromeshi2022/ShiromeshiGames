@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
-// use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 
 class BrainController extends Controller
 {
@@ -34,14 +34,22 @@ class BrainController extends Controller
     public function calculate(Request $request)
     {
         $user = Auth::user();
-        return view('brain/calculate', ['user' => $user, 'request' => $request]);
-    }
+        $rankers = DB::table('users')
+                ->orderby('brain_calculate_record','desc')
+                ->select('name','brain_calculate_record')
+                ->limit(3)
+                ->get();
 
-    public function calculate_record(Request $request, $id)
-    {
-        $user = User::find($id);
-        $user->brain_calculate_record = $request->brain_calculate_record;
-        $user->save();
-        return redirect('brain/calculate');
+        return view('brain/calculate', ['user' => $user, 'request' => $request, 'rankers' => $rankers]);
     }
+            public function calculate_record(Request $request, $id)
+            {
+                $user = User::find($id);
+                $user->brain_calculate_record = $request->brain_calculate_record;
+                $user->save();
+                return redirect('brain/calculate');
+            }
+
+
+
 }

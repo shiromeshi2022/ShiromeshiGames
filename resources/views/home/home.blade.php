@@ -200,7 +200,7 @@
     <div class="my-2 m-md-4 mx-auto d-flex flex-column" style="width: 286px;">
         <div class="d-flex flex-row m-2">
             <div class="game-mark" style="background:turquoise;"></div>
-            <h3 class="game-title">ひよこタイピング</h3>
+            <h3 class="game-title">こどもタイピング</h3>
         </div>
 
         <img class="border border-secondary rounded" src="{{asset('img/hiyoko.png')}}" style="height:180px;width:286px;">

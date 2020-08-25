@@ -80,7 +80,7 @@
             <a href="{{route('computer.typing')}}">名言タイピング</a>
           </li>
           <li>
-            <a href="{{route('computer.hiyokotyping')}}">ひよこタイピング</a>
+            <a href="{{route('computer.hiyokotyping')}}">こどもタイピング</a>
           </li>
         </ul>
 

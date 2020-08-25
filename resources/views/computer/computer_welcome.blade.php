@@ -49,7 +49,7 @@
     <div class="card mx-auto my-3" style="width: 18rem; height:400px;">
       <img src="{{asset('img/hiyoko.png')}}" class="bd-placeholder-img card-img-top border" width="100%" height="180" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><rect width="100%" height="100%" fill="#868e96"/></img>
       <div class="card-body d-flex flex-column">
-        <h5 class="card-title">ひよこタイピング</h5>
+        <h5 class="card-title">こどもタイピング</h5>
         <p class="card-text">子供向けのタイピングゲームです。</p>
         <p class="card-text">ローマ字を覚えながらパソコンに慣れることができます。</p>
         <a href="{{route('computer.hiyokotyping')}}" class="btn btn-primary align-self-center">ゲームをプレイする</a>

@@ -17,10 +17,42 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">ホーム</a></li>
     <li class="breadcrumb-item"><a href="{{ route('computer.welcome') }}">コンピューター道場</a></li>
-    <li class="breadcrumb-item active" aria-current="page">ひよこタイピング</li>
+    <li class="breadcrumb-item active" aria-current="page">こどもタイピング</li>
   </ol>
 </nav>
 <!--------↑[パンくずリスト]↑----------->
+
+
+
+<!--------↓[ランキング]↓----------->
+@php
+  $rank = 1;
+@endphp
+<h2 class="mt-5">ユーザーランキング</h2>
+<div class="d-lg-flex flex-row w-100">
+  @foreach($rankers as $ranker)
+    @php
+    if(!empty($prevrecord)){
+      if($prevrecord == $ranker->computer_hiyokotyping_record){
+      }else{
+        $rank++;
+      }
+    }
+    $prevrecord = $ranker->computer_hiyokotyping_record;
+    @endphp
+    <div class="col-lg-4 col-12 mr-2 mb-2 border shadow rounded">
+      <h2>{{$rank}}位</h2>
+      <div class="d-flex flex-row justify-content-around">
+        <h1>
+          <img src="{{asset('img/icon_normal.png')}}" class="border border-secondary rounded-circle h-100">
+          <h2 class="font-weight-bold">{{$ranker->name}}</h2>
+        </h1>
+        <h2 class="text-info font-weight-bold">{{$ranker->computer_hiyokotyping_record}}点</h2>
+      </div>
+    </div>
+  @endforeach
+</div>
+<!--------↑[ランキング]↑----------->
 
 
 
@@ -43,7 +75,7 @@
 
     <!--------↓[start]↓----------->
     <section id="start" class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-      <div class="h2 text-center"><img src="{{asset('img/hiyoko.png')}}" style="height: 100%;">ひよこタイピング</div>
+      <div class="h2 text-center"><img src="{{asset('img/hiyoko.png')}}" style="height: 100%;">こどもタイピング</div>
       <button id="startBtn" type="button" class="btn btn-primary d-block">スタート</button>
     </section>
 
