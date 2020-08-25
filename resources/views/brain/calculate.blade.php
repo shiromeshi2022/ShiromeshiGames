@@ -43,8 +43,7 @@
     <div class="col-lg-4 col-12 mr-2 mb-2 border shadow rounded">
       <h4>{{$rank}}位</h4>
       <div class="d-flex flex-row justify-content-around">
-
-          <h4 class="font-weight-bold">{{$ranker->name}}</h4>
+        <h4 class="font-weight-bold">{{$ranker->name}}</h4>
         <h4 class="text-info font-weight-bold">{{$ranker->brain_calculate_record}}点</h4>
       </div>
     </div>
@@ -78,11 +77,13 @@
 
   <!-----------------------↓↓[game]↓↓--------------------------->
   <div class="game">
-    <div class="game-nav">
-      <p id="questionTurn">１問目</p>
-      <p id="timer"></p>
-      <p id="score">0点</p>
-      <h2 id="addedScore" class="d-none">+10点</h3>
+    <div class="game-nav d-md-flex flex-row">
+      <p id="questionTurn" class="mx-3">１問目</p>
+      <p id="timer" class="mx-3"></p>
+      <div style="position: relative;" class="mx-3">
+        <p id="score">0点</p>
+        <h2 id="addedScore" class="d-none">+10点</h3>
+      </div>
     </div>
     <div class="question" id="question"></div>
 

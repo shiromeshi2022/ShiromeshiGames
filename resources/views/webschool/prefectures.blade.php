@@ -54,8 +54,8 @@
     <!--------↓[play]↓----------->
     <section id="play" class="d-none">
       <div class="d-flex mt-3">
-        <p id="questionTurn" class="h4 m-0 mr-3">１問目</p>
-        <p id="question" class="h3 font-weight-bold"></p>
+        <p id="questionTurn" class="h5 m-0 mr-3">１問目</p>
+        <p id="question" class="h4 font-weight-bold"></p>
       </div>
       <ul id="choices"></ul>
       <button id="nextBtn" class="btn btn-secondary d-block">次の問題</button>

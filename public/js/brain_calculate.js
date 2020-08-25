@@ -234,8 +234,8 @@
   // ↓点数表示↓
   score.textContent = `点数：${scoreCounter}点`;
 
-  function showAddScore (addScore) {
-    if(addScore >= 0) {
+  function showAddScore (addedScore) {
+    if(addedScore >= 0) {
       addedScoreNav.style.color = 'blue';
       addedScoreNav.textContent = `+${addedScore}点`;
       addedScoreNav.classList.remove('d-none');
@@ -442,7 +442,7 @@
       getMiss();
     }
   }
-  
+
   function getAnswer() {
     question.textContent = '正解！';
     question.classList.add('correct');
@@ -459,7 +459,7 @@
       question.classList.remove('correct');
     }, 500) 
   }
-  
+
   function getMiss() {
     question.textContent = '不正解！';
     question.classList.add('miss');

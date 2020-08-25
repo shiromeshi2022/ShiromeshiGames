@@ -21,27 +21,21 @@ body {
       ↓game↓ */
       .game {
         margin: 50px auto 50px auto;
-        /* background: pink; */
-        position: relative;
-      }
-      .game-nav {
-        display: flex;
-        position: relative;
       }
       .game-nav p {
-      margin: 30px 20px 0;
       font-size: 20px;
       }
       #addedScore{
         color:red;
         position: absolute;
         top: 10px;
-        left: 370px;
+        right: -10px;
       }
     
     
     
       .question {
+      max-width: 100%;
       width: 420px;
       height: 50px;
       line-height: 50px;
@@ -69,11 +63,12 @@ body {
       /* ↓電卓↓ */
       .pad {
       width: 380px;
+      max-width: 100%;
       margin: 0 auto;
       background: #c0c0c0;
-      border: 4px solid #696969;
+      border: 2px solid #696969;
       border-radius: 10px;
-      padding: 10px;
+      padding: 20px 0 20px 0;
       position: relative;
       }
 
@@ -97,7 +92,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 4px;
+        gap: 2px;
         font-size: 40px;
         }
 
@@ -107,16 +102,16 @@ body {
         background-color: #d3d3d3;
         line-height: 70px;
         text-align: center;
-        border: 2px solid #696969;
+        border: 1px solid #696969;
         border-radius: 10px;
         cursor: pointer;
         user-select: none;
-        box-shadow: 0 4px 0 #808080;
-        margin: 4px 4px 4px 4px;
+        box-shadow: 0 2px 0 #808080;
+        margin: 2px;
         }
 
         #addition {
-        width: 148px;
+        width: 146px;
         }
 
 
@@ -141,6 +136,7 @@ body {
         justify-content: space-around;
         margin: 2px auto;
         width: 380px;
+        max-width: 100%;
         padding-top: 5px;
         user-select: none;
         }
