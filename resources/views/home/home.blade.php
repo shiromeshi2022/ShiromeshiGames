@@ -48,7 +48,7 @@
     $computer_hiyokotyping_record = $user->computer_hiyokotyping_record;
     if($computer_hiyokotyping_record >= 100){$computer_hiyokotyping_reward = 'diamond'; $computer_hiyokotyping_level = 'ダイヤモンド';$diamond++;}
     elseif($computer_hiyokotyping_record >= 80){$computer_hiyokotyping_reward = 'gold'; $computer_hiyokotyping_level = '金';$gold++;}
-    elseif($computer_hiyokotyping_record >= 50){$computer_hiyokotyping_reward = 'silver'; $computer_hiyokotyping_level = '銀';$silver++;}
+    elseif($computer_hiyokotyping_record >= 50 ){$computer_hiyokotyping_reward = 'silver'; $computer_hiyokotyping_level = '銀';$silver++;}
     elseif($computer_hiyokotyping_record >= 20){$computer_hiyokotyping_reward = 'tan'; $computer_hiyokotyping_level = '銅';$tan++;}
     else{$computer_hiyokotyping_reward = 'beginner'; $computer_hiyokotyping_level = '初心者';$beginner++;}
     $total_game++;
