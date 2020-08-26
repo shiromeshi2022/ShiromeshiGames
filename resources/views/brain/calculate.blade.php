@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
-
-
 <head>
   <link rel="stylesheet" href="{{asset('/css/brain_calculate.css')}}">
 </head>
+
 <!---------------------------------------------------------------------------------------------------->
 @section('content')
 <div class="container">
