@@ -41,13 +41,10 @@
     $prevrecord = $ranker->computer_typing_record;
     @endphp
     <div class="col-lg-4 col-12 mr-2 mb-2 border shadow rounded">
-      <h2>{{$rank}}位</h2>
+      <h4>{{$rank}}位</h4>
       <div class="d-flex flex-row justify-content-around">
-        <h1>
-          <img src="{{asset('img/icon_normal.png')}}" class="border border-secondary rounded-circle h-100">
-          <h2 class="font-weight-bold">{{$ranker->name}}</h2>
-        </h1>
-        <h2 class="text-info font-weight-bold">{{$ranker->computer_typing_record}}点</h2>
+        <h4 class="font-weight-bold">{{$ranker->name}}</h4>
+        <h4 class="text-info font-weight-bold">{{$ranker->computer_typing_record}}点</h4>
       </div>
     </div>
   @endforeach
