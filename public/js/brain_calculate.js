@@ -228,19 +228,19 @@
 
   function showAddScore (addedScore) {
     if(addedScore >= 0) {
-      addedScoreLabeltyle.color = 'blue';
-      addedScoreLabelextContent = `+${addedScore}点`;
-      addedScoreLabellassList.remove('d-none');
+      addedScoreLabel.style.color = 'blue';
+      addedScoreLabel.textContent = `+${addedScore}点`;
+      addedScoreLabel.classList.remove('d-none');
       setTimeout(() => {
-        addedScoreLabellassList.add('d-none');
+        addedScoreLabel.classList.add('d-none');
       }, 500);
       addedScore = 0;
     } else {
-      addedScoreLabeltyle.color = 'red';
-      addedScoreLabelextContent = `${addedScore}点`;
-      addedScoreLabellassList.remove('d-none');
+      addedScoreLabel.style.color = 'red';
+      addedScoreLabel.textContent = `${addedScore}点`;
+      addedScoreLabel.classList.remove('d-none');
       setTimeout(() => {
-        addedScoreLabellassList.add('d-none');
+        addedScoreLabel.classList.add('d-none');
       }, 500);
       addedScore = 0;
     }
