@@ -44,7 +44,7 @@
                                 {{ __('パスワード（確認用）') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="新しいパスワードを入力してください。">
                             </div>
                         </div>
 

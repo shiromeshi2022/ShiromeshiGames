@@ -25,16 +25,17 @@ body {
       .game-nav p {
       font-size: 20px;
       }
-      #addedScore{
+      #addedScoreLabel{
         color:red;
         position: absolute;
-        top: 10px;
-        right: -10px;
+        width: 100%;
+        top: -20px;
+        left: 70px;
       }
     
     
     
-      .question {
+      .questionLabel {
       max-width: 100%;
       width: 420px;
       height: 50px;
@@ -72,7 +73,7 @@ body {
       position: relative;
       }
 
-        .screen {
+        .calculationScreen {
         width: 80%;
         margin: auto;
         height: 70px;
@@ -110,7 +111,7 @@ body {
         margin: 2px;
         }
 
-        #addition {
+        #addBtn {
         width: 146px;
         }
 
