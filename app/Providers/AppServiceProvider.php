@@ -24,18 +24,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(UrlGenerator $url)
     {
-        /** Schema::defaultStringLength(191);
-        * if (\App::environment('production')) {
-        *    \URL::forceScheme('https');
-        * }
-        */
+        Schema::defaultStringLength(191);
+            if (\App::environment('heroku')) {
+            \URL::forceScheme('https');
+            }
 
         // 本番環境のassetがhttpになりエラーが出ていた→ローカルと本番で分岐して解決
-        if (in_array(config('app.env'), ['prd', 'heroku'], true)) {
-            $url->forceScheme('https');
-        }elseif (in_array(config('app.env'), ['local'], true)) {
-            $url->forceScheme('http');
-        }
-
+        // if (in_array(config('app.env'), ['prd', 'heroku'], true)) {
+        //     $url->forceScheme('https');
+        // }elseif (in_array(config('app.env'), ['local'], true)) {
+        //     $url->forceScheme('http');
+        // }
     }
 }
