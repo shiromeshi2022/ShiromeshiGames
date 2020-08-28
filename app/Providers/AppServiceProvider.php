@@ -30,7 +30,7 @@ class AppServiceProvider extends ServiceProvider
         * }
         */
         // 本番環境のassetがhttpになりエラーが出ていた→ローカルと本番で分岐して解決
-        if (in_array(config('app.env'), ['prd', 'stg'], true)) {
+        if (in_array(config('app.env'), ['prd', 'heroku'], true)) {
             $url->forceScheme('https');
         }
 
