@@ -20,6 +20,13 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+
+//利用規約
+Route::get('/service_term', function() {
+    return view('service_term');
+})->name('service_term');
+
+
 Auth::routes();
 
 //マイページ
@@ -32,24 +39,21 @@ Route::group(["prefix"=>"home"], function() {
 
 
 
-//-----------------------------------------------------------------------------------------------------
-//-----[brain]の開始タグ----->
+//brain game
 Route::group(["prefix"=> "brain"], function() {
     Route::get("/welcome", "BrainController@welcome")->name('brain.welcome');
     Route::get("/calculate", "BrainController@calculate")->name('brain.calculate');
     Route::post("/calculate_record/{id}", "BrainController@calculate_record");
 });
-//-----[brain]終了タグ-----
-//------------------------------------------------------------------------------------------------------>
 
-//webschcool
+//webschcool game
 Route::group(["prefix"=> "webschool"], function() {
     Route::get("/welcome", "WebschoolController@welcome")->name('webschool.welcome');
     Route::get("/prefectures", "WebschoolController@prefectures")->name('webschool.prefectures');
     Route::post("/prefectures_record/{id}", "WebschoolController@prefectures_record");
 });
 
-//computer
+//computer game
 Route::group(["prefix"=> "computer"], function() {
     Route::get("/welcome", "ComputerController@welcome")->name('computer.welcome');
     Route::get("/typing", "ComputerController@typing")->name('computer.typing');
