@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>しろめしゲームス -Shiromeshi Games</title>
+    <title>【教育ゲーム】しろめしゲームス -ShiromeshiGames</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -27,7 +27,8 @@
             <img src="{{asset('img/shiromeshi_icon.jpg')}}" 
                 class="m-3" style="height:45px;vertical-align:middle;">
             <a class="navbar-brand rounded" href="{{ route('welcome') }}">
-                <h1 class="p-0 m-0 font-weight-bold" style="font-family: 'Nunito', sans-serif;">SHIROMESHI GAMES</h1>
+                <h1 class="d-md-block d-none p-0 m-0 font-weight-bold w-100" style="font-family: 'Nunito', sans-serif;">SHIROMESHI GAMES</h1>
+                <h2 class="d-md-none d-block p-0 m-0 font-weight-bold w-100" style="font-family: 'Nunito', sans-serif;">SHIROMESHI GAMES</h2>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
