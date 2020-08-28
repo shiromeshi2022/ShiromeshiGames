@@ -25,8 +25,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(UrlGenerator $url)
     {
         Schema::defaultStringLength(191);
-            if (\App::environment('heroku')) {
-            \URL::forceScheme('https');
+            if (\App::environment('local')) {
+                \URL::forceScheme('http');
+            }elseif(\App::environment('heroku')){
+                \URL::forceScheme('https');
             }
 
         // 本番環境のassetがhttpになりエラーが出ていた→ローカルと本番で分岐して解決
