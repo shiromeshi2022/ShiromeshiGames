@@ -38,14 +38,15 @@
   </fieldset>
 
   <!-----------------------↓↓[game]↓↓--------------------------->
-  <div class="container border border-dark rounded col-lg-8 col-12 h-50 my-5">
+  <div class="container border border-dark rounded col-lg-8 col-12 h-auto my-5">
 
     <!--------↓[start]↓----------->
-    <section id="start" class="w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+    <section id="start" class="w-100 h-50 d-flex flex-column justify-content-center align-items-center"
       style="background-image: url({{asset('img/prefectures_background.png')}});
         background-color:rgba(255,255,255,0.6);
         background-blend-mode:lighten;
         background-position:center;
+        background-repeat: no-repeat;
       ">
       <div class="h2">県庁所在地クイズ：47問</div>
       <button id="startBtn" type="button" class="btn btn-primary d-block">スタート</button>
