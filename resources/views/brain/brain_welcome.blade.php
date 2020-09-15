@@ -48,18 +48,7 @@
 
 
 
-    <!----------------------------------------------------------------------------------------------------
-    -----[順番ゲームcard]の開始タグ----->
-    <div class="card mx-auto my-3" style="width: 18rem; height:400px;">
-      <img src="{{asset('img/prepare.png')}}" class="bd-placeholder-img card-img-top border" width="100%" height="180" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><rect width="100%" height="100%" fill="#868e96"/></img>
-      <div class="card-body d-flex flex-column">
-        <h4 class="card-title">順番ゲーム</h5>
-        <p class="card-text"></p>
-        <a href="{{ route('brain.order') }}" class="btn btn-primary align-self-center">ゲームをプレイする</a>
-      </div>
-    </div>
-    <!-----[順番ゲームcard]終了タグ-----
-    ------------------------------------------------------------------------------------------------------>
+
 
 
   </div>
