@@ -15,10 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 //ホームページ
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+
+
+//ユーザー認証
+Auth::routes();
 
 
 //利用規約
@@ -26,8 +31,6 @@ Route::get('/service_term', function() {
     return view('service_term');
 })->name('service_term');
 
-
-Auth::routes();
 
 //マイページ
 Route::get('/home', 'HomeController@index')->name('home');
@@ -61,3 +64,4 @@ Route::group(["prefix"=> "computer"], function() {
     Route::get("/hiyokotyping", "ComputerController@hiyokotyping")->name('computer.hiyokotyping');
     Route::post("/hiyokotyping_record/{id}", "ComputerController@hiyokotyping_record");
 });
+

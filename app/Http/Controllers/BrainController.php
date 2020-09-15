@@ -51,5 +51,24 @@ class BrainController extends Controller
             }
 
 
+    // 順番ゲーム
+    public function order(Request $request)
+    {
+        $user = Auth::user();
+        $rankers = DB::table('users')
+                ->orderby('brain_order_record','desc')
+                ->select('name','brain_order_record')
+                ->limit(3)
+                ->get();
+
+        return view('brain/order', ['user' => $user, 'request' => $request, 'rankers' => $rankers]);
+    }
+            public function order_record(Request $request, $id)
+            {
+                $user = User::find($id);
+                $user->brain_order_record = $request->brain_order_record;
+                $user->save();
+                return redirect('brain/order');
+            }
 
 }

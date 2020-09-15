@@ -158,6 +158,16 @@
               </form>
             </div>
 
+            <form method="POST" action="/tweet/{{$user->id}}">
+              @csrf
+              <input name="gamename" type="hidden" value="電卓ノウトレ">
+              <input name="score" type="hidden" value="50">
+              <input type="submit" class="btn btn-primary" value="ツイートする">
+            </form>
+
+            
+
+
           @else
             <a href="{{route('login') }}">
               @php
@@ -165,6 +175,8 @@
               @endphp
             </a>
           @endauth
+
+
         </div>
 
         <button type="button" class="btn btn-primary w-50" id="restartBtn">もう一度プレイ</button>
@@ -189,6 +201,15 @@
 <!-- main -->
 </div>
 <!-- .container -->
+
+
+<form method="POST" action="/tweet">
+  @csrf
+  <input name="gamename" type="hidden" value="電卓ノウトレ">
+  <input name="score" type="hidden" value="50">
+  <input type="submit" class="btn btn-primary" value="ツイートする">
+</form>
+
 
 
 <!-- userデータをphpからjsへ渡す -->
