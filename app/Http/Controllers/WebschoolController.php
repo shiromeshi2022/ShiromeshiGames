@@ -30,16 +30,23 @@ class WebschoolController extends Controller
         return view('webschool/webschool_welcome', ['user' => $user]);
     }
 
+    //県庁所在地ゲーム
     public function prefectures(Request $request)
     {
         $user = Auth::user();
         return view('webschool/prefectures', ['user' => $user, 'request' => $request]);
     }
+
+    //県庁所在地ゲーム点数記録
     public function prefectures_record(Request $request, $id)
     {
         $user = User::find($id);
-        $user->webschool_prefectures_record = $request->webschool_prefectures_record;
+        if($request->score > $user->webschool_prefectures_record){
+            $user->webschool_prefectures_record = $request->score;
+        }
+        if($request->score > 0){
+            $user->coins = $user->coins + $request->score;
+        }
         $user->save();
-        return redirect('webschool/prefectures');
     }
 }

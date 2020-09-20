@@ -65,21 +65,18 @@
     </section>
 
     <!--------↓[result]↓----------->
-    <section id="result" class="d-none">
+    <section id="result" class="d-none text-center p-4">
       <p></p>
       <div id="userRecord" style="font-size:15px">
         @auth
-          @php
-          $recordScore = $user->webschool_prefectures_record;
-          @endphp
-          <div>
-            <p id="showRecord">{{$user->name}}さんの最高点 : {{$recordScore}}</p>
-            <p id="informRecord" class="alert alert-success d-none">最高得点更新しました！</p>
-            <form method="POST" action="{{ url('webschool/prefectures_record/'.$user->id) }}" id="sendRecord">
-              @csrf
-              <input type="hidden" name="webschool_prefectures_record" id="sendRecordInput">
-              <input type="submit" value="記録する" id="sendRecordBtn" class="btn btn-outline-primary w-50 d-none"></input>
-            </form>
+          <div class="d-flex justify-content-center">
+            <h2 id="gotCoinsLabel" style="color:gold;">+0</h2>
+            <img src="{{asset('img/coin.png')}}" style="height:30px;width:30px;vertical-align:middle;">
+          </div>
+
+          <p id="userResultLabel">usernameさんの最高点 : recordScore点</p>
+          <div id="updatedRecordLabel" class="d-none">
+            <p class="alert alert-success">最高得点更新しました！</p>
           </div>
         @else
           <a href="{{route('login') }}">
@@ -104,11 +101,15 @@
 <!-- userデータからphpへ -->
 @auth
   @php
+    $userid = $user->id;
+    $username = $user->name;
     $recordScore = $user->webschool_prefectures_record;
   @endphp
   <script>
     let isUser = true;
-    const recordScore = @json($recordScore);
+    const userid = @json($userid);
+    const username = @json($username);
+    let recordScore = @json($recordScore);
   </script>
 @else
   <script>

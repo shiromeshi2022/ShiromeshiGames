@@ -153,27 +153,51 @@
     play.classList.add('d-none');
     result.classList.remove('d-none');
 
-    const showRecord = document.getElementById('showRecord');
-    const informRecord = document.getElementById('informRecord');
-    const sendRecordBtn = document.getElementById('sendRecordBtn');
-
-    if(isUser){//ユーザーのみrecord更新
+    //ユーザーのみの処理
+    if(isUser){
+      const gotCoinsLabel = document.getElementById('gotCoinsLabel');
+      const userResultLabel = document.getElementById('userResultLabel');
+      const updatedRecordLabel = document.getElementById('updatedRecordLabel');
+      if(score > 0){
+        gotCoinsLabel.textContent = `+${score}`;
+      }
+      userResultLabel.textContent = `${username}さんの最高得点 : ${recordScore}点`;
+      //ユーザーの点数を記録
+      post(score);
+      //記録を更新した時の処理
       if(recordScore < score){
-        //最高得点超えた場合の表示
-        showRecord.classList.add('d-none');
-        informRecord.classList.remove('d-none');
-        sendRecordBtn.classList.remove('d-none');
-        //formに点数追加
-        const form = document.getElementById('sendRecord');
-        const input = document.getElementById('sendRecordInput');
-        input.value = score;
-        form.appendChild(input);
-        console.log(form);
-      }else{
-        showRecord.classList.remove('d-none');
-        informRecord.classList.add('d-none');
-        sendRecordBtn.classList.add('d-none');
+        recordScore = score;
+        userResultLabel.textContent = `${username}さんの最高得点 : ${recordScore}点`;
+        updatedRecordLabel.classList.remove('d-none');
+        setTimeout(() => {
+          updatedRecordLabel.classList.add('d-none');
+        }, 30000);
       }
     }
   }
+
+  //ajaxでpost送信
+  function post(score) {
+    $.ajax({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      },
+      //POST通信
+      type: "POST",
+      //ここでデータの送信先URLを指定します。
+      url: `prefectures_record/${userid}`,
+      data: {"score": score},
+
+      success : function(data, dataType) {
+        //成功時の処理
+      },
+      //処理がエラーであれば
+      error : function() {
+      alert('通信に失敗しました。点数が記録できません。');
+      }
+    });
+    //submitによる画面遷移なし
+    return false;
+  }
+
 }
