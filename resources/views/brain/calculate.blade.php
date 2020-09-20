@@ -142,7 +142,10 @@
         <h2 class="card-title font-weight-bold" id="resultScore"></h2>
         <!-- ユーザーのみコイン獲得 -->
         @auth
-          <h3 id="gotCoinsLabel">+0<img src="{{asset('img/coin.png')}}" style="height:30px;width:30px;vertical-align:middle;"></h3>
+          <div class="d-flex justify-content-center">
+            <h2 id="gotCoinsLabel" style="color:gold;">+0</h2>
+            <img src="{{asset('img/coin.png')}}" style="height:30px;width:30px;vertical-align:middle;">
+          </div>
         @endauth
         <p class="card-text" id="resultCorrect"></p>
         <p class="card-text" id="resultMiss"></p>
