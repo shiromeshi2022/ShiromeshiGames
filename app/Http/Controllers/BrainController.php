@@ -45,9 +45,13 @@ class BrainController extends Controller
             public function calculate_record(Request $request, $id)
             {
                 $user = User::find($id);
-                $user->brain_calculate_record = $request->brain_calculate_record;
+                if($request->score > $user->brain_calculate_record){
+                    $user->brain_calculate_record = $request->score;
+                }
+                if($request->score > 0){
+                    $user->coins = $user->coins + $request->score;
+                }
                 $user->save();
-                return redirect('brain/calculate');
             }
 
 

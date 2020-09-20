@@ -137,6 +137,22 @@
 </div>
 <!-- d-flex -->
 
+
+
+<!--------↓[所持金]↓----------->
+<div class="game-window col-11 my-2 ml-xl-4 mr-xl-auto mx-auto bg-white border rounded shadow d-md-flex flex-row">
+<h4 class="pin-title font-weight-bold"><img src="{{asset('img/pin.png')}}">Coins</h4>
+    <div class="display-3 mx-md-auto text-center font-weight-bold" style="color:yellow;">
+        <div>
+            {{$user->coins}}
+            <img src="{{asset('img/coin.png')}}" style="height:50px; width:50px; vertical-align:middle">
+        </div>
+    </div>
+</div>
+<!--------↑[所持金]↑----------->
+
+
+
 <!-----------------------↓↓[game成績]↓↓--------------------------->
 <!--------↓[電卓ノウトレ]↓----------->
 <div class="game-window col-11 my-2 ml-xl-4 mr-xl-auto mx-auto bg-white border rounded shadow d-md-flex flex-row">

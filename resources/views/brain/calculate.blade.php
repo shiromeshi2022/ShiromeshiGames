@@ -140,34 +140,19 @@
       <div class="card-body">
 
         <h2 class="card-title font-weight-bold" id="resultScore"></h2>
+        <!-- ユーザーのみコイン獲得 -->
+        @auth
+          <h3 id="gotCoinsLabel">+0<img src="{{asset('img/coin.png')}}" style="height:30px;width:30px;vertical-align:middle;"></h3>
+        @endauth
         <p class="card-text" id="resultCorrect"></p>
         <p class="card-text" id="resultMiss"></p>
 
         <div style="font-size:15px">
           @auth
-            @php
-              $recordScore = $user->brain_calculate_record;
-            @endphp
-            <div>
-              <p id="showRecordLabel">{{$user->name}}さんの最高点 : {{$recordScore}}</p>
-              <p id="informRecordLabel" class="alert alert-success d-none">最高得点更新しました！</p>
-              <form id="sendRecordForm" method="POST" action="{{ url('brain/calculate_record/'.$user->id) }}">
-                @csrf
-                <input id="sendRecordInput" type="hidden" name="brain_calculate_record">
-                <input id="sendRecordBtn" type="submit" value="記録する" class="btn btn-outline-primary w-50 d-none"></input>
-              </form>
+            <p id="userResultLabel">usernameさんの最高点 : recordScore点</p>
+            <div id="updatedRecordLabel" class="d-none">
+              <p class="alert alert-success">最高得点更新しました！</p>
             </div>
-
-            <form method="POST" action="/tweet/{{$user->id}}">
-              @csrf
-              <input name="gamename" type="hidden" value="電卓ノウトレ">
-              <input name="score" type="hidden" value="50">
-              <input type="submit" class="btn btn-primary" value="ツイートする">
-            </form>
-
-            
-
-
           @else
             <a href="{{route('login') }}">
               @php
@@ -175,8 +160,6 @@
               @endphp
             </a>
           @endauth
-
-
         </div>
 
         <button type="button" class="btn btn-primary w-50" id="restartBtn">もう一度プレイ</button>
@@ -203,23 +186,20 @@
 <!-- .container -->
 
 
-<form method="POST" action="/tweet">
-  @csrf
-  <input name="gamename" type="hidden" value="電卓ノウトレ">
-  <input name="score" type="hidden" value="50">
-  <input type="submit" class="btn btn-primary" value="ツイートする">
-</form>
-
 
 
 <!-- userデータをphpからjsへ渡す -->
 @auth
   @php
-    $recordScore = $user->brain_calculate_record;
+  $userid = $user->id;
+  $username = $user->name;
+  $recordScore = $user->brain_calculate_record;
   @endphp
   <script>
     let isUser = true;
-    const recordScore = @json($recordScore);
+    const userid = @json($userid);
+    const username = @json($username);
+    let recordScore = @json($recordScore);
   </script>
 @else
   <script>
@@ -228,6 +208,10 @@
 @endauth
 
 
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="{{asset('/js/brain_calculate.js')}}"></script>
+
+
 
 @endsection
