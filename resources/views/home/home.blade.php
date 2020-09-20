@@ -43,7 +43,7 @@
     $total_game++;
 @endphp
 <!--------↑[名言タイピング]↑----------->
-<!--------↓[ひよこタイピング]↓----------->
+<!--------↓[子供タイピング]↓----------->
 @php
     $computer_hiyokotyping_record = $user->computer_hiyokotyping_record;
     if($computer_hiyokotyping_record >= 100){$computer_hiyokotyping_reward = 'diamond'; $computer_hiyokotyping_level = 'ダイヤモンド';$diamond++;}
@@ -53,7 +53,7 @@
     else{$computer_hiyokotyping_reward = 'beginner'; $computer_hiyokotyping_level = '初心者';$beginner++;}
     $total_game++;
 @endphp
-<!--------↑[ひよこタイピング]↑----------->
+<!--------↑[子供タイピング]↑----------->
 
 <!-- 最高得点を合計[ゲームを追加ごとに書き込み] -->
 @php
@@ -79,11 +79,10 @@
 
 <div class="d-xl-flex flex-row">
     <!-----------------------↓↓[プロフィール]↓↓--------------------------->
-    <div class="profile-window my-4 mx-auto p-2 bg-white shadow rounded border d-flex flex-column justify-content-center align-items-center" style="width:400px;height:400px">
+    <div class="profile-window col-lg-4 col-11 my-4 mx-auto p-2 bg-white shadow rounded border d-flex flex-column justify-content-center align-items-center" style="width:400px;height:400px">
         <h4 class="pin-title font-weight-bold"><img src="{{asset('img/pin.png')}}">Profile</h4>
         <h1 class="font-weight-bold">{{$user->name}}</h1>
         <img src="{{asset('img/icon_normal.png')}}" class="icon border border-secondary rounded-circle m-3">
-        <h4>{{$user->email}}</h4>
         <a href="{{route('home.edit')}}" class="btn btn-danger btn-sm flex-end align-self-center mt-3 w-75">プロフィールを編集する</a>
     </div>
     <!-----------------------↑↑[プロフィール]↑↑--------------------------->
@@ -142,7 +141,14 @@
 <!--------↓[所持金]↓----------->
 <div class="game-window col-11 my-2 ml-xl-4 mr-xl-auto mx-auto bg-white border rounded shadow d-md-flex flex-row">
 <h4 class="pin-title font-weight-bold"><img src="{{asset('img/pin.png')}}">Coins</h4>
-    <div class="display-3 mx-md-auto text-center font-weight-bold" style="color:gold;">
+    <div class="d-md-block d-none display-3 mx-md-auto text-center font-weight-bold" style="color:gold;">
+        <div>
+            {{$user->coins}}
+            <img src="{{asset('img/coin.png')}}" style="height:50px; width:50px; vertical-align:middle">
+        </div>
+    </div>
+
+    <div class="d-md-none display-4 mx-md-auto text-center font-weight-bold" style="color:gold;">
         <div>
             {{$user->coins}}
             <img src="{{asset('img/coin.png')}}" style="height:50px; width:50px; vertical-align:middle">
