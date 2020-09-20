@@ -162,7 +162,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         NotificationChannels\Twitter\TwitterServiceProvider::class,
-        APP\Notifications\PostPublished::class,
 
         /*
          * Package Service Providers...
