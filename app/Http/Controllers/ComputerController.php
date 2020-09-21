@@ -30,6 +30,7 @@ class ComputerController extends Controller
         return view('computer/computer_welcome', ['user' => $user]);
     }
 
+    //タイピングゲーム
     public function typing()
     {
         $user = Auth::user();
@@ -40,14 +41,23 @@ class ComputerController extends Controller
                 ->get();
         return view('computer/typing', ['user' => $user, 'rankers' => $rankers]);
     }
+
+    //タイピングゲーム点数記録
     public function typing_record(Request $request, $id)
     {
         $user = User::find($id);
-        $user->computer_typing_record = $request->computer_typing_record;
+        if($request->score > $user->computer_typing_record){
+            $user->computer_typing_record = $request->score;
+        }
+        if($request->score > 0){
+            $user->coins = $user->coins + $request->score;
+        }
         $user->save();
-        return redirect('computer/typing');
     }
 
+
+
+    //子供タイピンゲーム
     public function hiyokotyping()
     {
         $user = Auth::user();
@@ -58,11 +68,17 @@ class ComputerController extends Controller
                 ->get();
         return view('computer/hiyokotyping', ['user' => $user, 'rankers' => $rankers]);
     }
+
+    //子供タイピングゲーム点数記録
     public function hiyokotyping_record(Request $request, $id)
     {
         $user = User::find($id);
-        $user->computer_hiyokotyping_record = $request->computer_hiyokotyping_record;
+        if($request->score > $user->computer_hiyokotyping_record){
+            $user->computer_hiyokotyping_record = $request->score;
+        }
+        if($request->score > 0){
+            $user->coins = $user->coins + $request->score;
+        }
         $user->save();
-        return redirect('computer/hiyokotyping');
     }
 }
