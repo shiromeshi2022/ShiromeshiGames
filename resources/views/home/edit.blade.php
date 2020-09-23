@@ -1,71 +1,52 @@
-@extends('layouts.app_nofooter')
+@extends('layouts.app')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('ユーザー情報変更') }}</div>
+                <div class="card-header d-flex justify-content-between">
+                    {{ __('ユーザー情報') }}
+                    <a href="/home"><button class="btn btn-danger">✖︎</button></a>
+                </div>
 
                 <div class="card-body">
-                    <form method="POST" action="/home/update/{{$user->id}}">
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h6>ユーザーネーム</h6>
+                            <h3 class="text-center">{{$user->name}}</h3>
+                            <a href="/home/edit_name"><button class="btn btn-secondary col-lg-2 col-md-3 col-4 offset-md-10 offset-9">編集する</button></a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h6>パスワード</h6>
+                            <h3 class="text-center">********</h3>
+                            <a href="/home/edit_password"><button class="btn btn-secondary col-lg-2 col-md-3 col-4 offset-md-10 offset-9">編集する</button></a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <h6>アイコン画像</h6>
+                            <div class="text-center">
+                                <img class="icon border border-secondary rounded-circle m-3 p-2" src="{{asset('img/'.$user->icon_url)}}" style="width:100px;">
+                            </div>
+                            <a href="/home/edit_icon"><button class="btn btn-secondary col-lg-2 col-md-3 col-4 offset-md-10 offset-9">編集する</button></a>
+                        </li>
+                    </ul>
+
+                    <hr>
+
+                    <form method="POST" action="/home/destroy/{{$user->id}}" class="mb-5" onSubmit="return check()">
                         @csrf
-
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('ユーザー名') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('パスワード') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">
-                                {{ __('パスワード（確認用）') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="新しいパスワードを入力してください。">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('変更する') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-
-                    <form method="POST" action="/home/destroy/{{$user->id}}" class="mt-3" onSubmit="return check()">
-                        @csrf
-                        <div class="col-md-6 offset-md-4">
+                        <div class="text-right">
                             <button type="submit" class="btn btn-danger" >
                                 {{ __('ユーザーを削除する') }}
                             </button>
                         </div>
                     </form>
+
+
+
                 </div>
             </div>
         </div>

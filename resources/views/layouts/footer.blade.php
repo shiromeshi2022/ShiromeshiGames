@@ -20,9 +20,23 @@
         <a href="{{route('welcome')}}">
           <h5 class="font-weight-bold text-uppercase mt-3 mb-4">ShiromeshiGames</h5>
         </a>
+
         <ul class="list-unstyled">
+
+          <li>
+            <a href="/">トップページ</a>
+          </li>
+
+          <li>
+            <a href="/home">マイページ</a>
+          </li>
+
           <li>
             <a href="{{route('service_term')}}">利用規約</a>
+          </li>
+
+          <li>
+            <a href="{{route('home.shop')}}">アイコンショップ</a>
           </li>
 
         </ul>

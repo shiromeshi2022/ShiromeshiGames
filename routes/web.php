@@ -35,7 +35,11 @@ Route::get('/service_term', function() {
 //マイページ
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(["prefix"=>"home"], function() {
+    Route::get("/shop", "HomeController@shop")->name('home.shop');
     Route::get("/edit", "HomeController@edit")->name('home.edit');
+    Route::get("/edit_name", "HomeController@edit_name");
+    Route::get("/edit_password", "HomeController@edit_password");
+    Route::get("/edit_icon", "HomeController@edit_icon");
     Route::post("/update/{id}", "HomeController@update");
     Route::post("/destroy/{id}", "HomeController@destroy");
 });

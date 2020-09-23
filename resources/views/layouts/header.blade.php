@@ -78,7 +78,7 @@
                         </li>
 
                         <a href="{{ route('home') }}" class="ml-3 d-none d-md-block">
-                            <img class="border border-secondary rounded-circle" src="{{ asset('img/icon_normal.png') }}" style="height:30px; width:30px; text-align:center;">
+                            <img class="border border-secondary rounded-circle" src="{{ asset('img/'.Auth::user()->icon_url) }}" style="height:30px; width:30px; text-align:center;">
                         </a>
                     @endguest
                 </ul>

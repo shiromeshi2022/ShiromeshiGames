@@ -66,9 +66,6 @@
 
 
 
-
-
-
 <div class="container-fluid">
 
 
@@ -82,7 +79,7 @@
     <div class="profile-window col-lg-4 col-11 my-4 mx-auto p-2 bg-white shadow rounded border d-flex flex-column justify-content-center align-items-center" style="width:400px;height:400px">
         <h4 class="pin-title font-weight-bold"><img src="{{asset('img/pin.png')}}">Profile</h4>
         <h1 class="font-weight-bold">{{$user->name}}</h1>
-        <img src="{{asset('img/icon_normal.png')}}" class="icon border border-secondary rounded-circle m-3">
+        <img src="{{asset('img/'.$user->icon_url)}}" class="icon border border-secondary rounded-circle m-3 p-2">
         <a href="{{route('home.edit')}}" class="btn btn-danger btn-sm flex-end align-self-center mt-3 w-75">プロフィールを編集する</a>
     </div>
     <!-----------------------↑↑[プロフィール]↑↑--------------------------->
@@ -160,6 +157,8 @@
 
 
 <!-----------------------↓↓[game成績]↓↓--------------------------->
+<div class="h3 m-2 mt-5">ゲーム成績</div>
+<hr>
 <!--------↓[電卓ノウトレ]↓----------->
 <div class="game-window col-11 my-2 ml-xl-4 mr-xl-auto mx-auto bg-white border rounded shadow d-md-flex flex-row">
     <div class="my-2 m-md-4 mx-auto d-flex flex-column" style="width: 286px;">
@@ -261,7 +260,7 @@
     function drawChart() {
         const data = google.visualization.arrayToDataTable([ //グラフデータの指定
             ['rank', 'Ranks per AllGames'],
-            ['称号なし', beginner],
+            ['初心者', beginner],
             ['銅', tan],
             ['銀', silver],
             ['金', gold],
