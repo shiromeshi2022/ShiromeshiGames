@@ -93,49 +93,49 @@ class HomeController extends Controller
             switch ($request->buy_icon) {
                 case "icon_girl":
                     $user->unlock_icon_girl = 1;
-                    $user->coins -= 10;
+                    $user->coins -= 200;
                     $user->save();
                     return redirect('/home/shop');
                     break;
                 case 'icon_salaryman':
                     $user->unlock_icon_salaryman = 1;
-                    $user->coins -= 10;
+                    $user->coins -= 500;
                     $user->save();
                     return redirect('/home/shop');
                     break;
                 case 'icon_salarywoman':
                     $user->unlock_icon_salarywoman = 1;
-                    $user->coins -= 10;
+                    $user->coins -= 1000;
                     $user->save();
                     return redirect('/home/shop');
                     break;
                 case 'icon_sennnin':
                     $user->unlock_icon_sennnin = 1;
-                    $user->coins -= 10;
+                    $user->coins -= 1500;
                     $user->save();
                     return redirect('/home/shop');
                     break;
                 case 'icon_shinpu':
                     $user->unlock_icon_shinpu = 1;
-                    $user->coins -= 10;
+                    $user->coins -= 2000;
                     $user->save();
                     return redirect('/home/shop');
                     break;
                 case 'icon_student':
                     $user->unlock_icon_student = 1;
-                    $user->coins -= 10;
+                    $user->coins -= 3000;
                     $user->save();
                     return redirect('/home/shop');
                     break;
                 case 'icon_queen':
                     $user->unlock_icon_queen = 1;
-                    $user->coins -= 10;
+                    $user->coins -= 4000;
                     $user->save();
                     return redirect('/home/shop');
                     break;
                 case 'icon_fukusuke':
                     $user->unlock_icon_fukusuke = 1;
-                    $user->coins -= 10;
+                    $user->coins -= 5000;
                     $user->save();
                     return redirect('/home/shop');
                     break;
