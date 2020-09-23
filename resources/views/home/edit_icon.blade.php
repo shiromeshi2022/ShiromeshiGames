@@ -12,7 +12,7 @@
   </div>
 
   <div class="card-body">
-    <div class="d-flex flex-wrap justify-content-between">
+    <div class="d-flex flex-wrap m-md-0 ml-5">
 
 
 
