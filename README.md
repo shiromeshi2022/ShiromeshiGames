@@ -7,6 +7,58 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+# about - Shiromeshi Games（しろめしゲームズ）
+
+※マーク作成者が就活ポートフォリオとして作成したサイトであり、開発者向けソースではありません。
+※This site was created by the author as a portfolio, not a developer source.
+
+
+このリポジトリは教育用ゲームサイトです。
+デプロイしているので、以下のリンクからアクセスすることができます。
+<https://shiromeshigames.herokuapp.com>
+
+
+# Features
+Shiromeshi Gamesは主に子供をターゲットにした教育用ゲームを提供します。
+
+<製作者理念＞
+ポートフォリオを作るにあたり、「クオリティーが高くなかっとしても、せっかくなら実際に使ってもらえるサイトにしたい」という思いから制作を始めました。
+高クオリティーでなくても、つい開きがちなサイトが私の場合はタイピングゲームサイトでした。
+そのことから、時間が余った時にプレイができるゲームサイトを作りたいと思ったことが発端です。
+しかし、暇つぶしに止まらず「身にならなければ意味がない」ため、自分が価値を生み出せる場所を模索しました。
+その結果、塾講師アルバイトをしていた私が考えたのが、「子供が学ぶべきものを学んでいない、または学ぶことを嫌っているという現実を変えたい」というところでした。
+私が学ぶべきと考えるものは「コンピューター・IT知識」であり、学ぶ上で知っておいて欲しいものが「楽しさ」です。
+
+結果生まれた理念が「楽しく学ぶべきものを」です。
+まだ未完成ですが、この理念に近づくためにアップデートを重ねています。
+
+
+＜コンテンツ＞
+当ゲームでは脳トレゲーム、学校知識ゲーム、コンピューター知識ゲームの３ジャンルを遊ぶことができます。
+いくつかのジャンルを用意することで、ユーザー登録してもらい総合的にプレイしていただける可能性を広げています。
+さらに、子供だけでなく様々な世代の方にプレイしてもらえるサイトにする目的もあります。
+しかし特出して、近年ITの需要が多いことに鑑み、特にIT知識に関するコンテンツを豊富にしていく予定です。
+
+＜デザイン＞
+ユーザーが使いやすく、シンプルで視覚的なわかりやすいページデザインを心がけています。
+子供が親しみを持ち覚えてもらえるようにという思いが込められています。
+
+
+# Requirement
+
+* PHP 7.3.11
+* Laravel Framework 7.19.1
+
+# Note
+
+
+
+# License
+
+"Shiromeshi Games" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
