@@ -20,6 +20,13 @@
 </div>
 
 
+<!-- 残金表示 -->
+<div class="col-12 m-2 p-2 border d-flex justify-content-center">
+  <h1>残金：<h1 class="font-weight-bold">{{$user->coins}}</h1 class="font-weight-bold"></h1>
+  <img src="{{asset('img/coin.png')}}" style="height:40px;">
+</div>
+
+
 <div class="d-flex flex-wrap justify-content-between">
 
 
