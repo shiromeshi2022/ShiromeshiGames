@@ -8,10 +8,13 @@ const play_window = document.getElementById('play');
 
 //クリックスタート
 startBtn.addEventListener('click', () => {
-  start_window.classList.remove('d-flex');
-  start_window.classList.add('d-none');
-  play_window.classList.remove('d-none');
   startGame();
+});
+//Enterキースタート
+window.addEventListener('keydown', e => {
+  if(event.key === 'Enter'){
+    startGame();
+  }
 });
 
 // スタートゲーム機能
@@ -19,9 +22,18 @@ let isPlaying = false;
 function startGame() {
   if(isPlaying === true){
     return;
+  }else{
+    isPlaying = true;
+    start_window.classList.remove('d-flex');
+    start_window.classList.add('d-none');
+    result_window.classList.add('d-none');
+    play_window.classList.remove('d-none');
+    startCowntDown();
   }
+}
 
-  //カウントダウン
+//カウントダウン
+function startCowntDown() {
   countdown.textContent = '3';
   setTimeout(() => {
     countdown.textContent = '2';
@@ -34,7 +46,6 @@ function startGame() {
     }, 1000);
   }, 1000);
 }
-
 
 
 
@@ -360,11 +371,6 @@ function post(score) {
 //リスタート
 const restartBtn = document.getElementById('restartBtn');
 restartBtn.addEventListener('click', () => {
-  result_window.classList.add('d-none');
-  play_window.classList.remove('d-none');
-  correct = 0;
-  miss = 0;
-  score = 0;
   startGame();
 });
 

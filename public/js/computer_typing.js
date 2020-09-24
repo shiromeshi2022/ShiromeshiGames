@@ -14,13 +14,30 @@ startBtn.addEventListener('click', () => {
   startGame();
 });
 
-// スタートゲーム機能
+//エンターキースタート
+window.addEventListener('keydown', e => {
+  if(event.key === 'Enter'){
+    startGame();
+  }
+});
+
+//ゲームスタート
 let isPlaying = false;
-function startGame() {
+function startGame(){
   if(isPlaying === true){
     return;
+  }else{
+    isPlaying = true;
+    start_window.classList.remove('d-flex');
+    start_window.classList.add('d-none');
+    result_window.classList.add('d-none');
+    play_window.classList.remove('d-none');
+    startCountDown();
   }
+}
 
+// カウントダウンスタート
+function startCountDown() {
   //カウントダウン
   countdown.textContent = '3';
   setTimeout(() => {
@@ -53,8 +70,8 @@ console.log(word_data.length);
 // プレイゲーム関数
 const sentence_zone = document.getElementById('sentence');
 const romaji_zone = document.getElementById('romaji');
-let correct;
-let miss;
+let correct = 0;
+let miss = 0;
 let startTime;
 function playGame() {
   setSentence();
@@ -62,7 +79,6 @@ function playGame() {
   miss = 0;
   startTime = Date.now();
   uppdateTimer();
-  isPlaying = true;
 }
 
 //文章セット関数
@@ -356,11 +372,6 @@ function post(score) {
 //リスタート
 const restartBtn = document.getElementById('restartBtn');
 restartBtn.addEventListener('click', () => {
-  result_window.classList.add('d-none');
-  play_window.classList.remove('d-none');
-  correct = 0;
-  miss = 0;
-  score = 0;
   startGame();
 });
 

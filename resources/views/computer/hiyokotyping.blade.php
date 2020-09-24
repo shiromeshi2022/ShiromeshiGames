@@ -74,6 +74,7 @@
     <section id="start" class="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
       <div class="h2 text-center"><img src="{{asset('img/hiyoko.png')}}" style="height: 100%;">こどもタイピング</div>
       <button id="startBtn" type="button" class="btn btn-primary d-block">スタート</button>
+      <div class="h3 m-3 text-muted">Enterキーでも開始します</div>
     </section>
 
     <!--------↓[play]↓----------->
@@ -226,7 +227,8 @@
             @endauth
           </div>
           <!-- #userRecord -->
-          <button type="button" class="btn btn-primary w-50" id="restartBtn">もう一度プレイ</button>
+          <button type="button" class="btn btn-primary mt-5" id="restartBtn">もう一度プレイ</button>
+          <div class="h3 m-3 text-muted">Enterキーでも開始します</div>
         </div>
       </div>
       <!-- card -->
