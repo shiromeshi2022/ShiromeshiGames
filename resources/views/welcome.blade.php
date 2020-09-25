@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    
 
 
 <!--------------------------------------------------------------
 -----[style]の開始タグ----->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <!--cssファイルの設定など-->
-        <link rel="stylessheet" href="{{asset('/css/welcome.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--cssファイルの設定など-->
+    <link rel="stylessheet" href="{{asset('/css/welcome.css')}}">
 <!-----[style]終了タグ-----
 --------------------------------------------------------------->
-        <script src="{{ asset('/js/app.js') }}"></script>
+    <script src="{{ asset('/js/app.js') }}"></script>
+
+    <meta name="google-site-verification" content="ui1rqHvLhi38zR4xQw8hzDIs_sE3k8B7Rn1eU4OjO5Y" />
 </head>
 
 <body>
