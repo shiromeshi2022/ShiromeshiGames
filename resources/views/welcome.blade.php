@@ -19,6 +19,16 @@
     <script src="{{ asset('/js/app.js') }}"></script>
 
     <meta name="google-site-verification" content="ui1rqHvLhi38zR4xQw8hzDIs_sE3k8B7Rn1eU4OjO5Y" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179038847-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-179038847-1');
+    </script>
+
 </head>
 
 <body>
