@@ -239,7 +239,7 @@
             @endauth
           </div>
           <!-- #userRecord -->
-          <button type="button" class="btn btn-primary mt-5" id="restartBtn">もう一度プレイ</button>
+          <button type="button" class="btn btn-primary mt-4" id="restartBtn">もう一度プレイ</button>
           <div class="h3 m-3 text-muted">Enterキーでも開始します</div>
         </div>
       </div>
