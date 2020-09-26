@@ -207,9 +207,9 @@
         <div class="card-header">
           結果
         </div>
-        <div class="card-body text-center p-5">
+        <div class="card-body text-center p-4">
           <h3 class="card-text">
-            <div class="h3 d-flex flex-row justify-content-center font-weight-bold my-2">
+            <div class="h3 d-flex flex-row justify-content-center font-weight-bold">
               <h3>成功タイプ：</h3>
               <div id="correct" class="text-primary"></div>
               <h3>　-　ミスタイプ数：</h3>
@@ -231,7 +231,7 @@
                 <p class="alert alert-success">最高得点更新しました！</p>
               </div>
             @else
-              <a href="{{route('login') }}">
+              <a href="{{route('login') }}" class="h3 my-2">
                 @php
                   echo  'ユーザー登録すると得点が記録できます';
                 @endphp
@@ -240,7 +240,7 @@
           </div>
           <!-- #userRecord -->
           <button type="button" class="btn btn-primary mt-4" id="restartBtn">もう一度プレイ</button>
-          <div class="h3 m-3 text-muted">Enterキーでも開始します</div>
+          <div class="h5 m-1 text-muted">Enterキーでも開始します</div>
         </div>
       </div>
       <!-- card -->
