@@ -1,12 +1,11 @@
-@extends('layouts.app')
-
 <head>
   <title>脳トレラボ【しろめしゲームズ】</title>
   <meta name="description" content="処理能力や判断能力を向上させる脳トレゲームが遊べます。子供むけ教育ゲーム【しろめしゲームズ】がおくる脳トレゲームコーナーのホームページです。（計算脳トレゲームなど）">
 </head>
 
-@section('content')
 
+@extends('layouts.app')
+@section('content')
 <div 
   class="row featurette" 
   style="background: limegreen; display: flex; justify-content: center; align-items: center;"

@@ -1,10 +1,10 @@
-@extends('layouts.app')
-
 <head>
   <title>Web学校【しろめしゲームズ】</title>
   <meta name="description" content="学校の授業内容をゲームやクイズで覚えることができます。子供むけ教育ゲーム【しろめしゲームズ】がおくるWeb学校のホームページです。">
 </head>
 
+
+@extends('layouts.app')
 @section('content')
 
 <div 

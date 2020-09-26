@@ -1,12 +1,11 @@
-@extends('layouts.app')
-
 <head>
   <title>コンピューター道場【しろめしゲームズ】</title>
   <meta name="description" content="ゲームを遊んでコンピューターやテクノロジーに強くなれます。子供むけ教育ゲーム【しろめしゲームズ】がおくるコンピューター道場のホームページです。（タイピングゲームなど）">
 </head>
 
-@section('content')
 
+@extends('layouts.app')
+@section('content')
 <div 
   class="row featurette my-4" 
   style="background: turquoise; display: flex; justify-content: center; align-items: center;"

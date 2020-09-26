@@ -1,7 +1,3 @@
-@extends('layouts.app')
-
-
-
 <head>
   <title>名言タイピング【しろめしゲームズ / コンピューター道場】</title >
   <meta name="description" content="大人も楽しめるタイピングゲームです。長めの言葉をタイピングすることで高速タイピングを習得しましょう。子供むけ教育ゲーム【しろめしゲームズ】がおくるコンピューター道場の１つです。">
@@ -9,6 +5,9 @@
   <!-- publicのファイル読み込み -->
   <link rel="stylesheet" href="{{asset('/css/computer_typing.css')}}">
 </head>
+
+
+@extends('layouts.app')
 <!---------------------------------------------------------------------------------------------------->
 @section('content')
 <div class="container">
