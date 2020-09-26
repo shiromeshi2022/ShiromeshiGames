@@ -3,13 +3,15 @@
 
 
 <head>
+  <title>県庁所在地クイズ【しろめしゲームズ / Web学校】</title >
+  <meta name="description" content="47都道府県の県庁所在地を答えるクイズです。県庁所在地を覚えたい時に遊びましょう。子供むけ教育ゲーム【しろめしゲームズ】がおくるWeb学校ゲームの１つです。">
+
   <!-- publicのファイル読み込み -->
   <link rel="stylesheet" href="{{asset('/css/webschool_prefectures.css')}}">
 </head>
 <!---------------------------------------------------------------------------------------------------->
 @section('content')
 <div class="container">
-
 
 
 <!--------↓[パンくずリスト]↓----------->

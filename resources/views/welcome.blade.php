@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="ja">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>【教育ゲーム】しろめしゲームズ -ShiromeshiGames</title>
     <meta name="description" content="子供用の教育ゲームサイトです。ゲーム形式で楽しく学ぶことで、お子様に勉強の楽しさを知ってもらいましょう！脳トレゲームやコンピューター学習など、多様なコンテンツを遊ぶことができます。（脳トレゲーム、タイピングゲーム、クイズ、..など）">
 
     <!-- Fonts -->

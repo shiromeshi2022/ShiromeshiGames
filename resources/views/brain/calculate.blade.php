@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 <head>
+  <title>電卓ノウトレ 【しろめしゲームズ / 脳トレラボ】</title>
+  <meta name="description" content="電卓の計算を素早くすることで脳の処理能力向上を目指すゲームです。子供むけ教育ゲーム【しろめしゲームズ】がおくる脳トレゲームのうちの１つです。">
+
   <link rel="stylesheet" href="{{asset('/css/brain_calculate.css')}}">
 </head>
 

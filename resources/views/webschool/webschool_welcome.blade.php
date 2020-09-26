@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
+<head>
+  <title>Web学校【しろめしゲームズ】</title>
+  <meta name="description" content="学校の授業内容をゲームやクイズで覚えることができます。子供むけ教育ゲーム【しろめしゲームズ】がおくるWeb学校のホームページです。">
+</head>
+
 @section('content')
+
 <div 
   class="row featurette my-4" 
   style="background: goldenrod; display: flex; justify-content: center; align-items: center;"

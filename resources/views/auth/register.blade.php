@@ -1,5 +1,9 @@
 @extends('layouts.app_nofooter')
 
+<head>
+    <title>ユーザー登録【しろめしゲームズ】</title>
+</head>
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

@@ -61,6 +61,7 @@
 @endphp
 <!---------------------------------------↑↑↑[点と称号を決める]↑↑↑--------------------------------------------->
 <head>
+    <title>マイページ【しろめしゲームズ -Shiromeshi Games】</title>
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
 </head>
 

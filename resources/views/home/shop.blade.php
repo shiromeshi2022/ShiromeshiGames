@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+<head>
+  <title>アイコンショップ【しろめしゲームズ -Shiromeshi Games】</title>
+</head>
+
 @section('content')
 <div class="container">
 <div class="row justify-content-center">

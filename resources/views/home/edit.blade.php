@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+<head>
+    <title>ユーザー情報編集【しろめしゲームズ -Shiromeshi Games】</title>
+</head>
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
