@@ -32,6 +32,12 @@ Route::get('/service_term', function() {
 })->name('service_term');
 
 
+//お問い合わせフォーム
+Route::get('/contact_form', function() {
+    return view('contact_form');
+})->name('contact_form');
+
+
 //マイページ
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(["prefix"=>"home"], function() {

@@ -28,16 +28,22 @@
           </li>
 
           <li>
-            <a href="/home">マイページ</a>
+            <a href="{{route('service_term')}}">利用規約</a>
           </li>
 
-          <li>
-            <a href="{{route('service_term')}}">利用規約</a>
+          <!-- <li>
+            <a href="/contact_form">お問い合わせ</a>
+          </li> -->
+
+          <li class="mt-2">
+            <a href="/home">マイページ</a>
           </li>
 
           <li>
             <a href="{{route('home.shop')}}">アイコンショップ</a>
           </li>
+
+
 
         </ul>
 
