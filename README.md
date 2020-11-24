@@ -14,7 +14,8 @@
 
 しろめしゲームズとは、子供にweb上で学習機会を提供するweb学習サイトです。
 脳トレ、学校勉強、IT学習の３コンテンツからなり、３つのジャンルを体系的に学習できるサイトです。
-<img src="{{asset('img/shiromeshi_welcome.jpg')}}">
+![shiromeshi_welcome](https://user-images.githubusercontent.com/66049360/100038090-bdb0c880-2e46-11eb-9ddd-cee524630c1a.jpg)
+
 
 このリポジトリは教育用ゲームサイトです。
 デプロイしているので、以下のリンクからアクセスすることができます。
