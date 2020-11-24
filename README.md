@@ -22,6 +22,7 @@
 <https://shiromeshigames.herokuapp.com>
 
 
+<br>
 
 # Philosophy
 
@@ -35,7 +36,7 @@
 結果生まれた理念が*「楽しく学ぶべきものを」*です。
 まだ未完成ですが、この理念に近づくためにアップデートを重ねています。
 
-
+<br>
 
 # Features
 Shiromeshi Gamesは主に子供をターゲットにした教育用ゲームを提供します。
@@ -60,7 +61,7 @@ Shiromeshi Gamesは主に子供をターゲットにした教育用ゲームを�
   ユーザーが使いやすく、シンプルで視覚的なわかりやすいページデザインを心がけています。
   子供が親しみを持ち覚えてもらえるようにという思いが込められています。
 
-
+<br>
 
 # Requirement
 
@@ -68,13 +69,13 @@ Shiromeshi Gamesは主に子供をターゲットにした教育用ゲームを�
 * Laravel Framework 7.19.1
 * 
 
-
+<br>
 
 # License
 
 "Shiromeshi Games" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
-
+<br>
 
 ## About Laravel
 
